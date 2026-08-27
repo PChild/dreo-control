@@ -1,0 +1,31 @@
+STREAM DECK SETUP
+=================
+
+1. Keep dreo_server.py running.
+2. In Stream Deck, drag a System > Open action onto a button.
+3. Choose the desired .bat file from this folder.
+4. Give the button a short title such as OFF, LIGHT, LOW, MED, or BRIGHT.
+
+Included presets
+----------------
+01_everything_off.bat  Fan off, light off
+03_fan_low.bat         Fan speed 3, light off
+04_fan_medium.bat      Fan speed 4, light off
+05_bright_room.bat     Fan speed 3, light on, brightness 100
+fan_off.bat            Fan off, leave the light unchanged
+toggle_fan.bat          Toggle fan power, keep the current speed and light
+toggle_light.bat        Toggle the light, leave the fan unchanged
+
+Custom presets
+--------------
+Copy preset_template.bat, rename it, and edit its final quoted query.
+
+Examples:
+  "fan=3&light=off"
+  "fan=toggle"
+  "light=toggle"
+  "fan=off&light=on&brightness=30"
+  "fan=8&light=on&brightness=75&temp=54"
+
+Keep every query inside quotation marks so Windows treats the ampersands as
+part of the URL instead of as command separators.
